@@ -57,8 +57,9 @@ public class AmazonStepDefinitions {
     public void sonuclariniphoneicerdiginitesteder() {
         String arananKelime="iphone";
         String actualAramaSonucStr= amazonPage.aramaSonucElementi.getText();
+        System.out.println(actualAramaSonucStr);
+        Assert.assertTrue(actualAramaSonucStr.contains(arananKelime)); //sen bu seffer degismis olmalısın
 
-        Assert.assertTrue(actualAramaSonucStr.contains(arananKelime)); //burda deneme yapmıstım
     }
     @Then("sayfayi kapatir")
     public void sayfayikapatir(){
